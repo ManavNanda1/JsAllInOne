@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="datatables.min.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Navbar Code Below -->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Js Tasks</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Table-Task</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="API-FETCH.html">API FETCH</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Calculator.html">Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="crud.html">Crud Operation</a>
+              </li>
+             
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Calculator Task Below -->
+      <div class="container text-center mt-3 mb-3 head-calc-task">
+        <h2> Below Is Calculator Task OF Getting Values Using Modal</h2>  
+       </div>
+
+       <!-- button to get the modal from above -->
+       <div class="container text-center mt-3 mb-3">
+        <button class="btn btn-info text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">Click Me to get Modal</button>
+       </div>
+
+       <!-- Modal Below -->
+       <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModal" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Manav's Calculator</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+  
+  
+                <div class="form-group row">
+                  <label for="Value1" class="col-sm-2 col-form-label">Value 1</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Value1" placeholder="Please Enter Value 1 Here">
+                  </div>
+                </div>
+  
+  
+                <div class="form-group row">
+                  <label for="Value2" class="col-sm-2 col-form-label">Value 2</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="Value2" placeholder="Please Enter Value 2 Here">
+                  </div>
+                </div>      
+                <!-- Checkboxes below -->
+  
+                <div class="form-check">
+                 Addition <input class="form-check-input" type="checkbox"  id="Addition" >  
+                </div>
+                <div class="form-check">
+                  Subtraction  <input class="form-check-input" type="checkbox" value="" id="Subtraction">
+                </div>
+                <div class="form-check">
+                  Multiplication  <input class="form-check-input" type="checkbox" value="" id="Multiplication">
+                </div>
+                <div class="form-check">
+                  Division:  <input class="form-check-input" type="checkbox" value="" id="Division">
+                </div>
+  
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Calculator table Below  -->
+       <div class="container text-center">
+        <table class="table table-responsive table-bordered table-dark" id="CalcTable">
+          <thead>
+            <th>Value -1 </th>
+            <th>Value -2</th>
+            <th>Addition </th>
+            <th>Subtraction</th>
+            <th>Multiplication</th>
+            <th>Division</th>
+            <th>Action</th>
+          </thead>
+          <tbody class="Calctbody">
+
+          </tbody>
+        </table>
+       </div>
+
+
+
+</body>
+<script src="jquery-3.6.3.js"></script>
+<script src="datatables.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</html>

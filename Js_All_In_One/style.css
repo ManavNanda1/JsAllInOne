@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+body{
+    background-color: #333333 !important;
+}
+
+::placeholder{
+    text-align: center;
+}
+label{
+    color: white;
+}
+
+/* ---------------------- Table-Task Styling Below --------------------------  */
+.head-table-task{
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.head-table-task:hover{
+    border: 6x solid wheat;
+    color: red;
+    border-radius: 20px;
+    transition: 0.5s ease-in;
+}
+
+/* Button of add button styling below  */
+.add-row-btn{
+    font-size: 20px !important;
+    font-weight: bolder !important;
+    border: 4px solid black;
+}
+
+.add-row-btn:hover{
+    border: 3px solid white !important;
+    color: rgb(27, 21, 27) !important;
+    background-color: rgb(139, 131, 250) !important;
+    border-radius: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+/* Submit Button Styling Below */
+.SubmitDataBtn{
+    border: 4px solid white;
+    font-weight: bolder !important;
+    font-size: 18px !important;
+}
+
+.SubmitDataBtn:hover{
+    border: 4px solid white !important;
+    background-color: rgb(44, 243, 167) !important;
+    color: black !important;
+    transition: 0.4s ease-in-out;
+}
+
+/* -------------------------------  Search Bar Styling Below  ----------------------------- */
+.search-bar{
+    display: none;
+}
+
+/* Saved Table Styling Below  */
+.PassColor{
+    background-color: rgb(89, 197, 247) !important;
+    color: black !important;
+}
+
+.FailColor{
+    background-color: rgb(255, 140, 140) !important;
+    color: black !important;
+}
+
+.PassBtnColor{
+    background-color:greenyellow !important;
+    color: black !important;
+}
+
+
+/*  ------------------------------------------ Calculator Styling Below ---------------------------------------- */
+.head-calc-task{
+    border: 2px solid white;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+}
+
+.head-calc-task:hover{
+    border: 6x solid wheat;
+    color: red;
+    border-radius: 20px;
+    transition: 0.5s ease-in;
+}
+
+/* Modal Sryling Below */

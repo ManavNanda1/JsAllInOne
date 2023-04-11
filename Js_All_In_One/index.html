@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="datatables.min.css">
+    <title>Tasks Of Javascript / Jquery</title>
+</head>
+<body>
+    
+    <!-- Navbar Code Below -->
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Js Tasks</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Table-Task</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="API-FETCH.html">API FETCH</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Calculator.html">Calculator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="crud.html">Crud Operation</a>
+              </li>
+             
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Table Task Below -->
+      <div class="container text-center mt-3 mb-3 head-table-task">
+       <h2> Below Is Table Task Where User Data Added in Tables Below</h2>  
+      </div>
+
+      <!-- Add Button Below  -->
+      <div class="container text-center mt-4">
+        <button class="btn btn-info add-row-btn" type="button" id="add-row-1" onclick="AddRow()">Add-Row</button>
+      </div>
+
+      <!-- Main Table Below  -->
+      <div class="container text-center mt-3 mb-3 table-responsive">
+
+        <table class="table table-bordered table-dark table-hover table-responsive" id="Main-Table">
+            <thead>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Subject</th>
+              <th>Marks</th>
+              <th>Remove</th>
+              <th>Action</th>
+            </thead>
+            <form id="Main-Table-Form">
+              <tbody class="text-center" id="Main-tbody">
+                <tr>
+                  <td>1</td>
+                  <td><input type="text" class="NameValue" placeholder="Enter Name Here"></td>
+                  <td><input type="text" class="SubjectValue" placeholder="Enter Subject Here"></td>
+                  <td><input type="number" class="MarkValue" placeholder="Enter Marks Here"></td>
+                  <td> <button class="btn btn-info pass-btn" type="button">Pass</button>
+                  <button class="btn btn-danger fail-btn" type="button">Fail</button></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><input type="text" class="NameValue" placeholder="Enter Name Here"></td>
+                  <td><input type="text" class="SubjectValue" placeholder="Enter Subject Here"></td>
+                  <td><input type="number" class="MarkValue" placeholder="Enter Marks Here"></td>
+                  <td> <button class="btn btn-info pass-btn" type="button">Pass</button>
+                    <button class="btn btn-danger fail-btn" type="button">Fail</button></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><input type="text" class="NameValue" placeholder="Enter Name Here"></td>
+                  <td><input type="text" class="SubjectValue" placeholder="Enter Subject Here"></td>
+                  <td><input type="number" class="MarkValue" placeholder="Enter Marks Here"></td>
+                  <td> <button class="btn btn-info pass-btn" type="button">Pass</button>
+                    <button class="btn btn-danger fail-btn" type="button">Fail</button></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td><input type="text" class="NameValue" placeholder="Enter Name Here"></td>
+                  <td><input type="text" class="SubjectValue" placeholder="Enter Subject Here"></td>
+                  <td><input type="number" class="MarkValue" placeholder="Enter Marks Here"></td>
+                  <td> <button class="btn btn-info pass-btn" type="button">Pass</button>
+                    <button class="btn btn-danger fail-btn" type="button">Fail</button></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td><input type="text" class="NameValue" placeholder="Enter Name Here"></td>
+                  <td><input type="text" class="SubjectValue" placeholder="Enter Subject Here"></td>
+                  <td><input type="number" class="MarkValue" placeholder="Enter Marks Here"></td>
+                  <td> <button class="btn btn-info pass-btn" type="button">Pass</button>
+                    <button class="btn btn-danger fail-btn" type="button">Fail</button></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </form>
+        </table>
+      </div>
+
+      <!-- submit data Button Below  -->
+      <div class="container text-center mt-2">
+        <button class="btn btn-warning text-center SubmitDataBtn" type="button" onclick="SubmitData()" id="Sub-btn-1">
+          Submit Data
+        </button>
+      </div>
+
+      <!-- Search bar Below  -->
+      <div class="container text-center search-bar mt-3">
+        <div class="input-group input-group-sm mb-3">
+          <div class="input-group-prepend">
+          </div>
+          <input type="text" class="form-control fs-5 fw-bolder" id="SearchBar" onkeyup="Search()" placeholder="Search Your Specified Data Here" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+        </div>
+      </div>
+      
+      <!-- Saved Table Below  -->
+      <div class="container text-center saved-table mt-5">
+        <table class="table bg-dark table-bordered text-light table-responsive " id="SavedTable">
+            <thead id="SavedtableThead">
+            </thead>
+            <tbody id="SavedTableTbody">
+            </tbody>
+        </table>
+      </div>
+      
+
+</body>
+<script src="jquery-3.6.3.js"></script>
+<script src="datatables.js"></script>
+<script src="bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</html>
